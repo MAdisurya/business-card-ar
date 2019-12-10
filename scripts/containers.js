@@ -6,10 +6,12 @@ class Container extends React.Component
 
         // Props
         // (Position) this.initialPos = Position(x,y,z);
+        // (Rotation) this.initialRot = Rotation(p,y,r);
         // (Size) this.initialSize = Size(width,height);
 
         this.state = {
             position: this.props.initialPos,
+            rotation: this.props.initialRot,
             size: this.props.initialSize
         };
     }
@@ -18,11 +20,8 @@ class Container extends React.Component
     {
         return (
             <a-plane
-                position={
-                    this.state.position.x + " "
-                    + this.state.position.y + " "
-                    + this.state.position.z
-                }
+                position={this.state.position.toString()}
+                rotation={this.state.rotation.toString()}
                 width={this.state.size.width}
                 height={this.state.size.height}>
             </a-plane>
