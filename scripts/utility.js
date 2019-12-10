@@ -12,6 +12,15 @@ class Position
         this.y = y;
         this.z = z;
     }
+
+    /**
+     * Converts the position into a string and returns the string.
+     * E.g. converts [x, y, z] to "x y z"
+     */
+    toString()
+    {
+        return this.x + " " + this.y + " " + this.z;
+    }
 }
 
 class Size
