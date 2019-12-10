@@ -36,3 +36,28 @@ class Size
         this.height = height;
     }
 }
+
+class Rotation
+{
+    /**
+     * Constructor for the Rotation helper class
+     * @param {*} p - (Number) the initial pitch (x) value
+     * @param {*} y - (Number) the initial yaw (y) value
+     * @param {*} r - (Number) the initial roll (z) value
+     */
+    constructor(p = 0, y = 0, r = 0)
+    {
+        this.p = p;
+        this.y = y;
+        this.r = r;
+    }
+
+    /**
+     * Converts the rotation into a string and returns the string.
+     * E.g. converts [p, y, r] to "p y r"
+     */
+    toString()
+    {
+        return this.p + " " + this.y + " " + this.r;
+    }
+}
