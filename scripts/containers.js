@@ -1,4 +1,4 @@
-class Container extends React.Component
+class ARContainer extends React.Component
 {
     constructor(props)
     {
@@ -24,17 +24,8 @@ class Container extends React.Component
                 rotation={this.state.rotation.toString()}
                 width={this.state.size.width}
                 height={this.state.size.height}>
+                    {this.props.children}
             </a-plane>
         );
     }
-}
-
-class BoxContainer extends Container
-{
-
-}
-
-class CircleContainer extends Container
-{
-
 }
