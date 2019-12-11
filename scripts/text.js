@@ -6,6 +6,8 @@ class ARText extends React.Component
 
         // Default values
         this.defaultAlign = "center";
+        
+        this.wrapCountMultiplier = 5;
 
         // Props
         // (String) this.value;
@@ -15,9 +17,9 @@ class ARText extends React.Component
         this.state = {
             value: this.props.value,
             size: this.props.size,
-            align: (this.props.align == "") ? 
+            align: (this.props.align == undefined) ? 
                 this.defaultAlign : this.props.align,
-            wrapCount: (this.props.size.width * 5)
+            wrapCount: (this.props.size.width * this.wrapCountMultiplier)
         };
     }
 
@@ -33,5 +35,18 @@ class ARText extends React.Component
                 z-offset={0.05}>
             </a-text>
         );
+    }
+}
+
+class ARHeaderText extends ARText
+{
+    constructor(props)
+    {
+        super(props);
+
+        // Inherited Props
+        // (String) this.value;
+        // (Size) this.size;
+        // (String) this.align;
     }
 }
