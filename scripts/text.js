@@ -32,7 +32,7 @@ class ARText extends React.Component
                 align={this.state.align}
                 wrap-count={this.state.wrapCount}
                 color="black"
-                z-offset={0.05}>
+                z-offset={0.075}>
             </a-text>
         );
     }
