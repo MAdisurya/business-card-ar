@@ -37,3 +37,42 @@ class ARContainer extends React.Component
         );
     }
 }
+
+class ARImageContainer extends ARContainer
+{
+    constructor(props)
+    {
+        super(props);
+
+        // Inherited Props
+        // (Position) this.initialPos = Position(x,y,z);
+        // (Rotation) this.initialRot = Rotation(p,y,r);
+        // (Size) this.initialSize = Size(width,height);
+
+        // Props
+        // (String) this.imageSource;
+    }
+
+    componentDidMount()
+    {
+        // Have to use setState to append any additional props
+        // As state is already assigned from parent: ARContainer
+        this.setState({
+            imageSource: (this.props.imageSource == undefined) ?
+                "../assets/images/placeholder.jpg" : this.props.imageSource
+        });
+    }
+
+    render()
+    {
+        return (
+            <a-image
+                position={this.state.position.toString()}
+                rotation={this.state.rotation.toString()}
+                width={this.state.size.width}
+                height={this.state.size.height}
+                src={this.state.imageSource}>
+            </a-image>
+        );
+    }
+}
