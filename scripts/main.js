@@ -13,19 +13,22 @@ class App extends React.Component
 
                 {/* <a-box position='0 0.5 0' material='opacity: 0.7;'></a-box> */}
                 <ARContainer
-                    initialPos={new Position(1.5, 0.5, 0)}
+                    initialPos={new Position(0, 0.5, -1)}
+                    initialAnchor={new Position(0.5, 0.5, 0)}
                     initialSize={new Size(3, 2)}>
                     {/* Replace this Container with ARVideoContainer when created */}
                 </ARContainer>
                 <ARImageContainer
-                    initialPos={new Position(4.5, 0.5, 0)}
+                    initialPos={new Position(3, 0.5, -1)}
+                    initialAnchor={new Position(0.5, 0.5, 0)}
                     initialSize={new Size(2, 2)}
                     imageSource="#profile-img">
                 </ARImageContainer>
 
                 {/* Name Section */}
                 <ARContainer 
-                    initialPos={new Position(7, 0.5, 0)}
+                    initialPos={new Position(5.5, 0.5, -0.5)}
+                    initialAnchor={new Position(0.5, 0.5, 0)}
                     initialSize={new Size(2, 0.5)}>
                         <ARHeaderText 
                             value="MARIO"
@@ -33,7 +36,8 @@ class App extends React.Component
                         />
                 </ARContainer>
                 <ARContainer
-                    initialPos={new Position(7, 0.5, 0.75)}
+                    initialPos={new Position(5.5, 0.5, 0.15)}
+                    initialAnchor={new Position(0.5, 0.5, 0)}
                     initialSize={new Size(2, 0.5)}>
                         <ARHeaderText
                             value="ADISURYA"
@@ -43,7 +47,8 @@ class App extends React.Component
 
                 {/* About Section */}
                 <ARContainer
-                    initialPos={new Position(1.5, 0.5, 1.5)}
+                    initialPos={new Position(0, 0.5, 1.25)}
+                    initialAnchor={new Position(0.5, 0.5, 0)}
                     initialSize={new Size(2, 0.5)}>
                         <ARHeaderText
                             value="ABOUT"
@@ -51,7 +56,8 @@ class App extends React.Component
                         />
                 </ARContainer>
                 <ARContainer
-                    initialPos={new Position(1.5, 0.5, 3)}
+                    initialPos={new Position(0, 0.5, 2)}
+                    initialAnchor={new Position(0.5, 0.5, 0)}
                     initialSize={new Size(3, 2)}>
 
                 </ARContainer>
