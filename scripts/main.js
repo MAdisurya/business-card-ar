@@ -22,11 +22,13 @@ class App extends React.Component
                     initialSize={new Size(2, 2)}
                     imageSource="#profile-img">
                 </ARImageContainer>
+
+                {/* Name Section */}
                 <ARContainer 
                     initialPos={new Position(7, 0.5, 0)}
                     initialSize={new Size(2, 0.5)}>
                         <ARHeaderText 
-                            value="Mario"
+                            value="MARIO"
                             size={new Size(2, 1)}
                         />
                 </ARContainer>
@@ -34,10 +36,26 @@ class App extends React.Component
                     initialPos={new Position(7, 0.5, 0.75)}
                     initialSize={new Size(2, 0.5)}>
                         <ARHeaderText
-                            value="Adisurya"
+                            value="ADISURYA"
                             size={new Size(2, 1)}
                         />
                 </ARContainer>
+
+                {/* About Section */}
+                <ARContainer
+                    initialPos={new Position(1.5, 0.5, 1.5)}
+                    initialSize={new Size(2, 0.5)}>
+                        <ARHeaderText
+                            value="ABOUT"
+                            size={new Size(2, 1)} 
+                        />
+                </ARContainer>
+                <ARContainer
+                    initialPos={new Position(1.5, 0.5, 3)}
+                    initialSize={new Size(3, 2)}>
+
+                </ARContainer>
+
                 <a-marker-camera preset='hiro'></a-marker-camera>
             </a-scene>
         );
