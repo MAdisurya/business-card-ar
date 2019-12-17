@@ -32,12 +32,13 @@ class ARContainer extends React.Component
 
     componentDidMount()
     {
-        this.setState((state) => ({
-            position: this.calculatePosFromAnchor(state.position, state.size)
+        this.setState((state, props) => ({
+            position: this.calculatePosFromAnchor(state.position, state.size),
+            rotation: (props.initialRot == undefined) ?
+                this.defaultRot : state.rotation,
+            size: (props.initialSize == undefined) ?
+                this.defaultSize : state.size
         }));
-
-        console.log("Container Anchor: " + 
-            this.calculatePosFromAnchor(this.state.position, this.state.size));
     }
     
     render()
@@ -117,5 +118,22 @@ class ARImageContainer extends ARContainer
                 src={this.state.imageSource}>
             </a-image>
         );
+    }
+}
+
+class ARIconContainer extends ARImageContainer
+{
+    constructor(props)
+    {
+        super(props);
+
+        // Default values
+        this.defaultSize = new Size(0.5, 0.5);
+
+        // Inherited Props
+        // (Position) this.initialPos = Position(x,y,z);
+        // (Position) this.initialAnchor = Position(x,y,z);
+        // (Rotation) this.initialRot = Rotation(p,y,r);
+        // (Size) this.initialSize = Size(width,height);
     }
 }
