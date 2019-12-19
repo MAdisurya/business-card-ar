@@ -11,12 +11,14 @@ class ARContainer extends React.Component
         this.defaultAnchor = new Position(0.5, 0.5, 0.5);
         this.defaultRot = new Rotation(-90, 0, 0);
         this.defaultSize = new Size(1, 1);
+        this.defaultColor = "#FFF";
 
         // Props
         // (Position) this.initialPos = Position(x,y,z);
         // (Position) this.initialAnchor = Position(x,y,z);
         // (Rotation) this.initialRot = Rotation(p,y,r);
         // (Size) this.initialSize = Size(width,height);
+        // (String) this.initialColor = "";
 
         this.state = {
             position: (this.props.initialPos == undefined) ?
@@ -26,7 +28,9 @@ class ARContainer extends React.Component
             rotation: (this.props.initialRot == undefined) ?
                 this.defaultRot : this.props.initialRot,
             size: (this.props.initialSize == undefined) ?
-                this.defaultSize : this.props.initialSize
+                this.defaultSize : this.props.initialSize,
+            color: (this.props.initialColor == undefined) ?
+                this.defaultColor : this.props.initialColor
         };
     }
 
@@ -48,7 +52,8 @@ class ARContainer extends React.Component
                 position={this.state.position.toString()}
                 rotation={this.state.rotation.toString()}
                 width={this.state.size.width}
-                height={this.state.size.height}>
+                height={this.state.size.height}
+                color={this.state.color}>
                     {this.props.children}
             </a-plane>
         );
