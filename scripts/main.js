@@ -54,6 +54,7 @@ class App extends React.Component
                         <ARHeaderText 
                             value="MARIO"
                             size={new Size(2, 1)}
+                            color="#FFF"
                         />
                 </ARContainer>
                 <ARContainer
@@ -64,6 +65,7 @@ class App extends React.Component
                         <ARHeaderText
                             value="ADISURYA"
                             size={new Size(2, 1)}
+                            color="#FFF"
                         />
                 </ARContainer>
 
@@ -76,6 +78,7 @@ class App extends React.Component
                         <ARHeaderText
                             value="ABOUT"
                             size={new Size(2, 1)} 
+                            color="#FFF"
                         />
                 </ARContainer>
                 <ARContainer
@@ -99,6 +102,7 @@ class App extends React.Component
                         <ARHeaderText 
                             value="+64 21 024 54709"
                             size={new Size(4, 1)}
+                            color="#FFF"
                         />
                 </ARContainer>
                 <ARIconContainer
@@ -114,6 +118,7 @@ class App extends React.Component
                         <ARHeaderText 
                             value="mario.adisurya@gmail.com"
                             size={new Size(5, 1)}
+                            color="#FFF"
                         />
                 </ARContainer>
 
