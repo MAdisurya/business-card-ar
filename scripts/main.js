@@ -18,6 +18,17 @@ class App extends React.Component
                     <img
                         id="email-img"
                         src="../assets/images/mail-icon.png" />
+
+                    {/* Social Icons */}
+                    <img
+                        id="github-icon"
+                        src="../assets/images/github-icon.png" />
+                    <img
+                        id="bitbucket-icon"
+                        src="../assets/images/bitbucket-icon.png" />
+                    <img
+                        id="instagram-icon"
+                        src="../assets/images/instagram-icon.png" />
                 </a-assets>
 
                 {/* <a-box position='0 0.5 0' material='opacity: 0.7;'></a-box> */}
@@ -100,6 +111,26 @@ class App extends React.Component
                             size={new Size(5, 1)}
                         />
                 </ARContainer>
+
+                {/* Social Section */}
+                <ARIconContainer
+                    initialPos={new Position(1.25, 0.5, 4.5)}
+                    initialAnchor={new Position(0.5, 0.5, 0)}
+                    initialSize={new Size(0.75, 0.75)}
+                    imageSource="#github-icon">
+                </ARIconContainer>
+                <ARIconContainer
+                    initialPos={new Position(3.25, 0.5, 4.5)}
+                    initialAnchor={new Position(0.5, 0.5, 0)}
+                    initialSize={new Size(0.75, 0.75)}
+                    imageSource="#bitbucket-icon">
+                </ARIconContainer>
+                <ARIconContainer
+                    initialPos={new Position(5.25, 0.5, 4.5)}
+                    initialAnchor={new Position(0.5, 0.5, 0)}
+                    initialSize={new Size(0.75, 0.75)}
+                    imageSource="#instagram-icon">
+                </ARIconContainer>
 
                 <a-marker-camera preset='hiro'></a-marker-camera>
             </a-scene>
