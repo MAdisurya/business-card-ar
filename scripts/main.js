@@ -31,25 +31,26 @@ class App extends React.Component
                         src="../assets/images/instagram-icon.png" />
                 </a-assets>
 
-                {/* <a-box position='0 0.5 0' material='opacity: 0.7;'></a-box> */}
+                {/* Video Section */}
                 <ARContainer
                     initialPos={new Position(0, 0.5, -1)}
                     initialAnchor={new Position(0.5, 0.5, 0)}
                     initialSize={new Size(3, 2)}>
                     {/* Replace this Container with ARVideoContainer when created */}
                 </ARContainer>
+
+                {/* Name Section */}
                 <ARImageContainer
                     initialPos={new Position(3, 0.5, -1)}
                     initialAnchor={new Position(0.5, 0.5, 0)}
                     initialSize={new Size(2, 2)}
                     imageSource="#profile-img">
                 </ARImageContainer>
-
-                {/* Name Section */}
                 <ARContainer 
                     initialPos={new Position(5.5, 0.5, -0.5)}
                     initialAnchor={new Position(0.5, 0.5, 0)}
-                    initialSize={new Size(2, 0.5)}>
+                    initialSize={new Size(2, 0.5)}
+                    initialColor="#3e50b4">
                         <ARHeaderText 
                             value="MARIO"
                             size={new Size(2, 1)}
@@ -58,7 +59,8 @@ class App extends React.Component
                 <ARContainer
                     initialPos={new Position(5.5, 0.5, 0.15)}
                     initialAnchor={new Position(0.5, 0.5, 0)}
-                    initialSize={new Size(2, 0.5)}>
+                    initialSize={new Size(2, 0.5)}
+                    initialColor="#3e50b4">
                         <ARHeaderText
                             value="ADISURYA"
                             size={new Size(2, 1)}
@@ -69,7 +71,8 @@ class App extends React.Component
                 <ARContainer
                     initialPos={new Position(0, 0.5, 1.25)}
                     initialAnchor={new Position(0.5, 0.5, 0)}
-                    initialSize={new Size(2, 0.5)}>
+                    initialSize={new Size(2, 0.5)}
+                    initialColor="#3e50b4">
                         <ARHeaderText
                             value="ABOUT"
                             size={new Size(2, 1)} 
@@ -91,7 +94,8 @@ class App extends React.Component
                 <ARContainer 
                     initialPos={new Position(3, 0.5, 1.75)}
                     initialAnchor={new Position(0, 0.5, 0)}
-                    initialSize={new Size(4, 0.5)}>
+                    initialSize={new Size(4, 0.5)}
+                    initialColor="#3e50b4">
                         <ARHeaderText 
                             value="+64 21 024 54709"
                             size={new Size(4, 1)}
@@ -105,7 +109,8 @@ class App extends React.Component
                 <ARContainer 
                     initialPos={new Position(3, 0.5, 2.75)}
                     initialAnchor={new Position(0, 0.5, 0)}
-                    initialSize={new Size(5, 0.5)}>
+                    initialSize={new Size(5, 0.5)}
+                    initialColor="#3e50b4">
                         <ARHeaderText 
                             value="mario.adisurya@gmail.com"
                             size={new Size(5, 1)}
