@@ -88,7 +88,14 @@ class App extends React.Component
                         initialPos={new Position(0, 0.5, 2)}
                         initialAnchor={new Position(0.5, 0.5, 0)}
                         initialSize={new Size(3, 2)}>
-
+                            <ARParagraphText
+                                value="Hi, I'm Mario, and I have a passion 
+                                for creating functional digital solutions 
+                                with great design, and great code."
+                                size={new Size(2.5, 2)}
+                                align="left"
+                                anchor={new Position(1, 0.5, 0.5)}
+                            />
                     </ARContainer>
 
                     {/* Contact Section */}
