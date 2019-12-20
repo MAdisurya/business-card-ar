@@ -14,6 +14,30 @@ class Position
     }
 
     /**
+     * Helper method that calculates the position based on
+     * the containers anchor point and size. Returns a new Position.
+     * Currently only supports x and z anchors.
+     * @param {*} anchor - (Position) the desired anchor point for the object
+     * @param {*} size - (Size) the size of the object
+     */
+    calculatePosFromAnchor(anchor, size)
+    {
+        // Deduct Anchor so we get (-0.5, 0, 0.5) values respectively;
+        const newAnchor = new Position(
+            anchor.x - 0.5,
+            anchor.y - 0.5,
+            anchor.z - 0.5
+        );
+
+        // Return new position based on anchor point
+        return new Position(
+            this.x - (size.width * newAnchor.x),
+            this.y,
+            this.z - (size.height * newAnchor.z)
+        );
+    }
+
+    /**
      * Converts the position into a string and returns the string.
      * E.g. converts [x, y, z] to "x y z"
      */
