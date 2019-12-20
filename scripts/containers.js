@@ -4,8 +4,6 @@ class ARContainer extends React.Component
     {
         super(props);
 
-        this.calculatePosFromAnchor = this.calculatePosFromAnchor.bind(this);
-
         // Default values
         this.defaultPos = new Position(1, 0.5, 0);
         this.defaultAnchor = new Position(0.5, 0.5, 0.5);
@@ -37,7 +35,8 @@ class ARContainer extends React.Component
     componentDidMount()
     {
         this.setState((state, props) => ({
-            position: this.calculatePosFromAnchor(state.position, state.size),
+            position: state.position
+                .calculatePosFromAnchor(state.anchor, state.size),
             rotation: (props.initialRot == undefined) ?
                 this.defaultRot : state.rotation,
             size: (props.initialSize == undefined) ?
@@ -56,30 +55,6 @@ class ARContainer extends React.Component
                 color={this.state.color}>
                     {this.props.children}
             </a-plane>
-        );
-    }
-
-    /**
-     * Helper method that calculates the position based on
-     * the containers anchor point and size. Returns a new Position.
-     * Currently only supports x and z anchors.
-     * @param {*} pos - (Position) the position of the container
-     * @param {*} size - (Size) the size of the container
-     */
-    calculatePosFromAnchor(pos, size)
-    {
-        // Deduct Anchor so we get (-0.5, 0, 0.5) values respectively;
-        const newAnchor = new Position(
-            this.state.anchor.x - 0.5,
-            this.state.anchor.y - 0.5,
-            this.state.anchor.z - 0.5
-        );
-
-        // Return new position based on anchor point
-        return new Position(
-            pos.x - (size.width * newAnchor.x),
-            pos.y,
-            pos.z - (size.height * newAnchor.z)
         );
     }
 }
