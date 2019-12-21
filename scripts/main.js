@@ -148,7 +148,8 @@ class App extends React.Component
                         initialSize={new Size(0.75, 0.75)}
                         imageSource="#github-icon"
                         onClick={() => {
-                            console.log("Github!");
+                            window.open(
+                                "https://github.com/MAdisurya", "_blank");
                         }}>
                     </ARIconContainer>
                     <ARIconContainer
@@ -159,7 +160,8 @@ class App extends React.Component
                         initialSize={new Size(0.75, 0.75)}
                         imageSource="#bitbucket-icon"
                         onClick={() => {
-                            console.log("BitBucket!");
+                            window.open(
+                                "https://bitbucket.org/madisurya/", "_blank");
                         }}>
                     </ARIconContainer>
                     <ARIconContainer
@@ -170,7 +172,8 @@ class App extends React.Component
                         initialSize={new Size(0.75, 0.75)}
                         imageSource="#instagram-icon"
                         onClick={() => {
-                            console.log("Instagram!");
+                            window.open(
+                                "https://www.instagram.com/themaddev/", "_blank");
                         }}>
                     </ARIconContainer>
 
@@ -181,7 +184,7 @@ class App extends React.Component
                     <a-entity
                         raycaster="objects: .clickable"
                         cursor="fuse: true; fuseTimeout: 1400;"
-                        material="color: black; shader: flat"
+                        material="color: #3287a8; shader: flat"
                         position="0 0 -3"
                         geometry="primitive: ring; radiusInner: 0.04; radiusOuter: 0.06">
                             <a-animation 
