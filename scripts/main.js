@@ -3,7 +3,9 @@ class App extends React.Component
     render()
     {
         return (
-            <a-scene embedded>
+            <a-scene 
+                embedded
+                arjs="sourceType: webcam; debugUIEnabled: false;">
                 {/* Assets */}
                 <a-assets>
                     {/* Profile Image */}
@@ -31,7 +33,10 @@ class App extends React.Component
                         src="../assets/images/instagram-icon.png" />
                 </a-assets>
 
-                <a-marker preset="hiro" id="marker" emitevents="true">
+                <a-marker markerhandler 
+                    preset="hiro" 
+                    id="marker" 
+                    emitevents="true">
                 <a-entity id="main-wrapper">
 
                     {/* Video Section */}
@@ -100,6 +105,7 @@ class App extends React.Component
 
                     {/* Contact Section */}
                     <ARIconContainer
+                        id="phone-img"
                         initialPos={new Position(3, 0.5, 1.5)}
                         initialAnchor={new Position(1, 0.5, 0)}
                         imageSource="#phone-img">
@@ -116,6 +122,7 @@ class App extends React.Component
                             />
                     </ARContainer>
                     <ARIconContainer
+                        id="email-img"
                         initialPos={new Position(3, 0.5, 2.5)}
                         initialAnchor={new Position(1, 0.5, 0)}
                         imageSource="#email-img">
@@ -134,28 +141,69 @@ class App extends React.Component
 
                     {/* Social Section */}
                     <ARIconContainer
+                        id="github-icon"
+                        classList="clickable"
                         initialPos={new Position(1.25, 0.5, 4.5)}
                         initialAnchor={new Position(0.5, 0.5, 0)}
                         initialSize={new Size(0.75, 0.75)}
-                        imageSource="#github-icon">
+                        imageSource="#github-icon"
+                        onClick={() => {
+                            console.log("Github!");
+                        }}>
                     </ARIconContainer>
                     <ARIconContainer
+                        id="bitbucket-icon"
+                        classList="clickable"
                         initialPos={new Position(3.25, 0.5, 4.5)}
                         initialAnchor={new Position(0.5, 0.5, 0)}
                         initialSize={new Size(0.75, 0.75)}
-                        imageSource="#bitbucket-icon">
+                        imageSource="#bitbucket-icon"
+                        onClick={() => {
+                            console.log("BitBucket!");
+                        }}>
                     </ARIconContainer>
                     <ARIconContainer
+                        id="instagram-icon"
+                        classList="clickable"
                         initialPos={new Position(5.25, 0.5, 4.5)}
                         initialAnchor={new Position(0.5, 0.5, 0)}
                         initialSize={new Size(0.75, 0.75)}
-                        imageSource="#instagram-icon">
+                        imageSource="#instagram-icon"
+                        onClick={() => {
+                            console.log("Instagram!");
+                        }}>
                     </ARIconContainer>
 
                 </a-entity>
                 </a-marker>
 
-                <a-entity camera></a-entity>
+                <a-entity camera>
+                    <a-entity
+                        raycaster="objects: .clickable"
+                        cursor="fuse: true; fuseTimeout: 1400;"
+                        material="color: black; shader: flat"
+                        position="0 0 -3"
+                        geometry="primitive: ring; radiusInner: 0.04; radiusOuter: 0.06">
+                            <a-animation 
+                                begin="fusing"
+                                easing="ease-in"
+                                attribute="scale"
+                                fill="backwards"
+                                from="1 1 1"
+                                to="0.2 0.2 0.2"
+                                dur="1500">
+                            </a-animation>
+                            <a-animation 
+                                begin="click"
+                                easing="ease-in"
+                                attribute="scale"
+                                fill="forwards"
+                                from="0.2 0.2 0.2"
+                                to="1 1 1"
+                                dur="400">
+                            </a-animation>
+                    </a-entity>
+                </a-entity>
             </a-scene>
         );
     }
