@@ -136,6 +136,13 @@ class ARImageContainer extends ARContainer
                 height={this.state.size.height}
                 src={this.state.imageSource}
                 onClick={this.handleClick}>
+                    <a-animation
+                        begin="fusing"
+                        attribute="rotation"
+                        to="-90 360 0"
+                        easing="linear"
+                        dur="1500">
+                    </a-animation>
             </a-image>
         );
     }
