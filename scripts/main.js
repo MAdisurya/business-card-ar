@@ -24,6 +24,9 @@ class App extends React.Component
 
                     {/* Social Icons */}
                     <img
+                        id="www-icon"
+                        src="../assets/images/www-icon.png" />
+                    <img
                         id="github-icon"
                         src="../assets/images/github-icon.png" />
                     <img
@@ -142,9 +145,21 @@ class App extends React.Component
 
                     {/* Social Section */}
                     <ARIconContainer
+                        id="www-icon"
+                        classList="clickable"
+                        initialPos={new Position(0.5, 0.5, 4.5)}
+                        initialAnchor={new Position(0.5, 0.5, 0)}
+                        initialSize={new Size(0.75, 0.75)}
+                        imageSource="#www-icon"
+                        onClick={() => {
+                            window.open(
+                                "https://marioadisurya.com", "_blank");
+                        }}>
+                    </ARIconContainer>
+                    <ARIconContainer
                         id="github-icon"
                         classList="clickable"
-                        initialPos={new Position(1.25, 0.5, 4.5)}
+                        initialPos={new Position(2.25, 0.5, 4.5)}
                         initialAnchor={new Position(0.5, 0.5, 0)}
                         initialSize={new Size(0.75, 0.75)}
                         imageSource="#github-icon"
@@ -156,7 +171,7 @@ class App extends React.Component
                     <ARIconContainer
                         id="bitbucket-icon"
                         classList="clickable"
-                        initialPos={new Position(3.25, 0.5, 4.5)}
+                        initialPos={new Position(4, 0.5, 4.5)}
                         initialAnchor={new Position(0.5, 0.5, 0)}
                         initialSize={new Size(0.75, 0.75)}
                         imageSource="#bitbucket-icon"
@@ -168,7 +183,7 @@ class App extends React.Component
                     <ARIconContainer
                         id="instagram-icon"
                         classList="clickable"
-                        initialPos={new Position(5.25, 0.5, 4.5)}
+                        initialPos={new Position(5.75, 0.5, 4.5)}
                         initialAnchor={new Position(0.5, 0.5, 0)}
                         initialSize={new Size(0.75, 0.75)}
                         imageSource="#instagram-icon"
