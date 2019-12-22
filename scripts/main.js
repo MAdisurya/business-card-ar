@@ -5,6 +5,7 @@ class App extends React.Component
         return (
             <a-scene 
                 embedded
+                vr-mode-ui="enabled: false;"
                 arjs="sourceType: webcam; debugUIEnabled: false;">
                 {/* Assets */}
                 <a-assets>
