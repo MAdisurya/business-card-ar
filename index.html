@@ -12,7 +12,12 @@
     <script src="https://aframe.io/releases/0.6.0/aframe.min.js" crossorigin></script>
 
     <!-- AR.js -->
-    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+    <!-- <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script> -->
+    <!-- New commit 307264d using AR.js v2.1.0 currently very buggy. 
+        Produces Overconstrained Webcam error on Google Chrome
+        Also produces very weird orientation/rotation issues for a-frame.
+        Use previous version - AR.js v2.0.8 until fixed. -->
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/2.0.8/aframe/build/aframe-ar.js"></script>
 
     <!-- Load React. -->
     <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
