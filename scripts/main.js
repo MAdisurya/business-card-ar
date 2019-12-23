@@ -41,6 +41,7 @@ class App extends React.Component
                     // preset="hiro"
                     type="pattern"
                     url="/business-card-ar/assets/mad-pattern.patt"
+                    // url="../assets/mad-pattern.patt"
                     id="marker" 
                     emitevents="true">
                 <a-entity id="main-wrapper">
@@ -166,8 +167,8 @@ class App extends React.Component
                         initialSize={new Size(0.75, 0.75)}
                         imageSource="#www-icon"
                         onClick={() => {
-                            window.open(
-                                "https://marioadisurya.com", "_blank");
+                            window.location.assign(
+                                "https://marioadisurya.com");
                         }}>
                     </ARIconContainer>
                     <ARIconContainer
@@ -178,8 +179,8 @@ class App extends React.Component
                         initialSize={new Size(0.75, 0.75)}
                         imageSource="#github-icon"
                         onClick={() => {
-                            window.open(
-                                "https://github.com/MAdisurya", "_blank");
+                            window.location.assign(
+                                "https://github.com/MAdisurya");
                         }}>
                     </ARIconContainer>
                     <ARIconContainer
@@ -190,8 +191,8 @@ class App extends React.Component
                         initialSize={new Size(0.75, 0.75)}
                         imageSource="#bitbucket-icon"
                         onClick={() => {
-                            window.open(
-                                "https://bitbucket.org/madisurya/", "_blank");
+                            window.location.assign(
+                                "https://bitbucket.org/madisurya/");
                         }}>
                     </ARIconContainer>
                     <ARIconContainer
@@ -202,8 +203,8 @@ class App extends React.Component
                         initialSize={new Size(0.75, 0.75)}
                         imageSource="#instagram-icon"
                         onClick={() => {
-                            window.open(
-                                "https://www.instagram.com/themaddev/", "_blank");
+                            window.location.assign(
+                                "https://www.instagram.com/themaddev/");
                         }}>
                     </ARIconContainer>
 
