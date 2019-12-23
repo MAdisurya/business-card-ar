@@ -12,35 +12,35 @@ class App extends React.Component
                     {/* Profile Image */}
                     <img 
                         id="profile-img" 
-                        src="./assets/mad-pattern.patt" />
+                        src="/business-card-ar/assets/mad-pattern.patt" />
                     
                     {/* Contact Images */}
                     <img
                         id="phone-img"
-                        src="./assets/images/phone-icon.png" />
+                        src="/business-card-ar/assets/images/phone-icon.png" />
                     <img
                         id="email-img"
-                        src="./assets/images/mail-icon.png" />
+                        src="/business-card-ar/assets/images/mail-icon.png" />
 
                     {/* Social Icons */}
                     <img
                         id="www-icon"
-                        src="./assets/images/www-icon.png" />
+                        src="/business-card-ar/assets/images/www-icon.png" />
                     <img
                         id="github-icon"
-                        src="./assets/images/github-icon.png" />
+                        src="/business-card-ar/assets/images/github-icon.png" />
                     <img
                         id="bitbucket-icon"
-                        src="./assets/images/bitbucket-icon.png" />
+                        src="/business-card-ar/assets/images/bitbucket-icon.png" />
                     <img
                         id="instagram-icon"
-                        src="./assets/images/instagram-icon.png" />
+                        src="/business-card-ar/assets/images/instagram-icon.png" />
                 </a-assets>
 
                 <a-marker markerhandler 
                     // preset="hiro"
                     type="pattern"
-                    url="https://raw.githubusercontent.com/MAdisurya/business-card-ar/master/assets/mad-pattern.patt"
+                    url="/business-card-ar/assets/mad-pattern.patt"
                     id="marker" 
                     emitevents="true">
                 <a-entity id="main-wrapper">
