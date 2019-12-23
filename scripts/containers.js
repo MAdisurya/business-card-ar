@@ -155,7 +155,7 @@ class ARIconContainer extends ARImageContainer
         super(props);
 
         // Default values
-        this.defaultSize = new Size(0.5, 0.5);
+        this.defaultSize = new Size(1, 1);
 
         // Inherited Props
         // (String) this.id = "";
