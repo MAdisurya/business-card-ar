@@ -11,7 +11,7 @@ class ARText extends React.Component
         this.defaultAnchor = new Position(0.5, 0.5, 0.5);
         this.defaultColor = "#000";
         
-        this.wrapCountMultiplier = 5;
+        this.wrapCountMultiplier = 3;
 
         // Props
         // (Position) this.position;
@@ -88,6 +88,6 @@ class ARParagraphText extends ARText
         // (String) this.align;
         // (String) this.color;
 
-        this.wrapCountMultiplier = 10;
+        this.wrapCountMultiplier = 5;
     }
 }
