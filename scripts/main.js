@@ -12,7 +12,7 @@ class App extends React.Component
                     {/* Profile Image */}
                     <img 
                         id="profile-img" 
-                        src="/business-card-ar/assets/mad-pattern.patt" />
+                        src="/business-card-ar/assets/images/profile.png" />
                     
                     {/* Contact Images */}
                     <img
